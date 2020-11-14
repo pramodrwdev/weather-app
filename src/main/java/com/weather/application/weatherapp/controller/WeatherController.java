@@ -16,6 +16,12 @@ public class WeatherController {
     @Autowired
     WeatherService weatherService;
 
+    @RequestMapping("/")
+    public String main() {
+        return "Hello please enter city";
+
+    }
+
     @RequestMapping("weatherforecast/{city}")
     public List<ForecastDate> getWeatherForThree(@PathVariable String city){
 
